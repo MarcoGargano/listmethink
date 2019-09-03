@@ -10,35 +10,33 @@ collections:
     label: "List"
     folder: "src/pages/list"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - label: Items list
+        name: lists
+        widget: list
+        default: ["Lists"]
+        field: 
+          - {name: item, widget: string, default: "Add item..."}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Items list", name: "lists", widget: "list", default: ["Lists"], field: {label: Image, name: image, widget: image}}
-      - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-      - label: Author
-        name: author
-        widget: object
-        fields:
-          - {label: Name, name: name, widget: string, default: "Emmet"}
-          - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
 
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+  # - name: "blog"
+  #   label: "Blog"
+  #   folder: "src/pages/blog"
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   fields:
+  #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Publish Date", name: "date", widget: "datetime"}
+  #     - {label: "Description", name: "description", widget: "text"}
+  #     - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+  #     - {label: "Featured Image", name: "featuredimage", widget: image}
+  #     - {label: "Body", name: "body", widget: "markdown"}
+  #     - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
     label: "Pages"
