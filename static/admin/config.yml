@@ -17,12 +17,11 @@ collections:
       - label: Item list
         name: itemlist
         widget: list
-      # default: ["Lists"]
+        default: "Lists"
         fields: 
-          - {label: Name, name: name, widget: string, default: "Emmet"}
-          - {label: Item, name: item, widget: string, default: "Add item..."}
-      - {label: "Description", name: "description", widget: "text"}
+          - {label: Add item..., name: item, widget: string}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Description", name: "description", widget: "text"}
       # - label: Author
       #   name: author
       #   widget: object
