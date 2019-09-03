@@ -13,21 +13,21 @@ collections:
     slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - label: Items list
+      - {label: "Title", name: "title", widget: "string", default: "Appoint your list..."}
+      - label: Item list
         name: lists
         widget: list
-        default: ["Lists"]
+      # default: ["Lists"]
         field: 
           - {label: Item, name: item, widget: string, default: "Add item..."}
-      - label: Author
-        name: author
-        widget: object
-        fields:
-          - {label: Name, name: name, widget: string, default: "Emmet"}
-          - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list"}
+      # - label: Author
+      #   name: author
+      #   widget: object
+      #   fields:
+      #     - {label: Name, name: name, widget: string, default: "Emmet"}
+      #     - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
 
   # - name: "blog"
   #   label: "Blog"
