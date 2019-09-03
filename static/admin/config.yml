@@ -18,7 +18,8 @@ collections:
         name: itemlist
         widget: list
         fields: 
-          - {label: Add item..., name: additemlist, widget: markdown, default: "Your first item list..."}
+          # - {label: Add item..., name: additemlist, widget: string, default: "Your new item list..."}
+          - {label: Add item..., name: additemlist, widget: list, fields: [{label: ---, name: itemlisttext, widget: string}]}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list"}
 
