@@ -13,12 +13,13 @@ collections:
     slug: "{{year}}{{month}}{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string", default: "Appoint your list..."}
+      - {label: "Appoint your list...", name: "title", widget: "string"}
       - label: Item list
-        name: lists
+        name: itemlist
         widget: list
       # default: ["Lists"]
-        field: 
+        fields: 
+          - {label: Name, name: name, widget: string, default: "Emmet"}
           - {label: Item, name: item, widget: string, default: "Add item..."}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list"}
