@@ -17,9 +17,8 @@ collections:
       - label: Item list
         name: itemlist
         widget: list
-        default: "Lists"
         fields: 
-          - {label: Add item..., name: item, widget: string}
+          - {label: Add item..., name: additemlist, widget: string, default: "Your first item list..."}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Description", name: "description", widget: "text"}
       # - label: Author
