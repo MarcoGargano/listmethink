@@ -9,3 +9,8 @@ update_configs:
           dependency_type: all
           update_type: in_range
     version_requirement_updates: widen_ranges
+  - label: "List"
+    name: "Item list"
+    widget: "list"
+    allow_add: false
+    default: ["Lists"]
