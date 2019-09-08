@@ -6,6 +6,13 @@ $red-light: rgba(233, 30, 99, 0.2);
 body {
 	background: $gray-light;
 }
+a {
+	text-decoration: none;
+	color: $gray;
+}
+.float-right {
+	float: right;
+}
 
 .list {
 	background: white;
@@ -18,31 +25,90 @@ body {
 		padding: 0 20px;
 	}
 	&-body {
-		input {
-			margin: 10px 20px;
-		}
 		span {
 			border-left: solid 1px $gray;
 			padding: 15px 20px;
 		}
 		.sortable-chosen {
-			box-shadow: 0 0 20px red;
+			box-shadow: 0 0 20px $red-light;
 		}
-		.blue-background-class {
-			background: blue;
+		.sortable-ghostClass {
+			background: $red-light;
+			opacity: .2;
+		}
+	}
+	&-footer {
+		position: relative;
+		.list-item-add {
+			position: absolute;
+			top: 0;
+			left: calc(50% - 34px);
+			height: 68px;
+			width: 68px;
+			display: block;
+			text-align: center;
+			border-radius: 100%;
+			background-color: $gray;
+			font-size: 64px;
+			color: $red-light;
 		}
 	}
 	ul {
 		margin: 0;
 		padding: 0;
 	}
+	.list-head-setting, 
+	.list-item-delete {
+		text-align: center;
+		height: 40px;
+		width: 40px;
+		margin: 10px;
+		background-color: $gray-light;
+		border-radius: 100%;
+		color: black;
+		font-size: 16px;
+		line-height: 2.6rem;
+	}
 	.list-item {
 		list-style: none;
-		min-height: 50px;
+		min-height: 4rem;
 		border-top: solid 1px $red-light;
 		border-bottom: solid 1px $blue-light;
-		line-height: 50px;
+		line-height: 4rem;
 		font-size: 1.1rem;
 		font-family: Helvetica;
+		&-label {
+			width: calc(100% - 60px);
+	    height: 65px;
+		}
+		&-input {
+			margin: 10px 20px;
+			+ span {
+				position: relative;
+					&:before {
+					width: 0;
+					content: ' ';
+					position: absolute;
+					top: 50%;
+					left: 10px;
+					border: solid 1px $red-light;
+					transition: all .4s ease-in-out;
+				}
+			}
+			&:checked + span:before {
+				width: calc(100% - 20px);
+			}
+		}
+		&-delete {
+			text-align: center;
+			height: 40px;
+			width: 40px;
+			margin: 10px;
+			background-color: $gray-light;
+			border-radius: 100%;
+			color: black;
+			font-size: 16px;
+			line-height: 2.4rem;
+		}
 	}
 }

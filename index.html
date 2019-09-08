@@ -2,27 +2,55 @@
 <html>
 <head>
 	<title>List Me Think</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/line-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
 <div class="list">
 	<div class="list-head">
+		<a class="list-head-setting float-right" href=""><i class="la la-ellipsis-v"></i></a>
 		<h1>Title list...</h1>
 		<h3>Description list...</h3>
 	</div>
 	<div class="list-body">
 		<ul id="mylist">
-			<li class="list-item"><label><input type="checkbox" name=""><span>List item 001</span></label><i class="la la-trash"></i></li>
-			<li class="list-item"><label><input type="checkbox" name=""><span>List item 002</span></label><i class="la la-trash"></i></li>
-			<li class="list-item"><label><input type="checkbox" name=""><span>List item 003</span></label><i class="la la-trash"></i></li>
-			<li class="list-item"><label><input type="checkbox" name=""><span>List item 004</span></label><i class="la la-trash"></i></li>
-			<li class="list-item"><label><input type="checkbox" name=""><span>List item 005</span></label><i class="la la-trash"></i></li>
+			<li class="list-item">
+				<label class="list-item-label">
+					<input class="list-item-input" type="checkbox" name=""><span>List item 001</span>
+				</label>
+				<a class="list-item-delete float-right" href="#"><i class="la la-trash"></i></a>
+			</li>
+			<li class="list-item">
+				<label class="list-item-label">
+					<input class="list-item-input" type="checkbox" name=""><span>List item 002</span>
+				</label>
+				<a class="list-item-delete float-right" href="#"><i class="la la-trash"></i></a>
+			</li>
+			<li class="list-item">
+				<label class="list-item-label">
+					<input class="list-item-input" type="checkbox" name=""><span>List item 003</span>
+				</label>
+				<a class="list-item-delete float-right" href="#"><i class="la la-trash"></i></a>
+			</li>
+			<li class="list-item">
+				<label class="list-item-label">
+					<input class="list-item-input" type="checkbox" name=""><span>List item 004</span>
+				</label>
+				<a class="list-item-delete float-right" href="#"><i class="la la-trash"></i></a>
+			</li>
+			<li class="list-item">
+				<label class="list-item-label">
+					<input class="list-item-input" type="checkbox" name=""><span>List item 005</span>
+				</label>
+				<a class="list-item-delete float-right" href="#"><i class="la la-trash"></i></a>
+			</li>
 		</ul>
 	</div>
 	<div class="list-footer">
-		<p>Minor text...</p>
+		<p>Updated 08/09/2019 - 19:46</p>
+		<p class="float-right">by Marco G.</p>
+		<a class="list-item-add" href="#"><i class="la la-plus-circle"></i></a>
 	</div>
 </div>
 
@@ -30,11 +58,10 @@
 
 <script type="text/javascript">
 	// new Sortable(document.getElementById('mylist'), { group: 'shared' });
-
 	var elements = document.getElementsByClassName('list-item');
 	new Sortable(mylist, {
-	    animation: 150,
-	    ghostClass: 'blue-background-class'
+	    animation: 200,
+	    ghostClass: 'sortable-ghostClass'
 	});
 </script>
 
