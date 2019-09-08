@@ -1,0 +1,48 @@
+$gray-light: #f6f6f6;
+$gray: #ddd;
+$blue-light: #90caf9;
+$red-light: rgba(233, 30, 99, 0.2);
+
+body {
+	background: $gray-light;
+}
+
+.list {
+	background: white;
+	width: 100%;
+	max-width: 500px;
+	margin: 10% auto;
+	border: solid 1px $gray;
+	border-radius: 6px;
+	&-head, &-footer {
+		padding: 0 20px;
+	}
+	&-body {
+		input {
+			margin: 10px 20px;
+		}
+		span {
+			border-left: solid 1px $gray;
+			padding: 15px 20px;
+		}
+		.sortable-chosen {
+			box-shadow: 0 0 20px red;
+		}
+		.blue-background-class {
+			background: blue;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	.list-item {
+		list-style: none;
+		min-height: 50px;
+		border-top: solid 1px $red-light;
+		border-bottom: solid 1px $blue-light;
+		line-height: 50px;
+		font-size: 1.1rem;
+		font-family: Helvetica;
+	}
+}

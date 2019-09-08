@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List Me Think</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/line-awesome.min.css">
+</head>
+<body>
+
+<div class="list">
+	<div class="list-head">
+		<h1>Title list...</h1>
+		<h3>Description list...</h3>
+	</div>
+	<div class="list-body">
+		<ul id="mylist">
+			<li class="list-item"><label><input type="checkbox" name=""><span>List item 001</span></label><i class="la la-trash"></i></li>
+			<li class="list-item"><label><input type="checkbox" name=""><span>List item 002</span></label><i class="la la-trash"></i></li>
+			<li class="list-item"><label><input type="checkbox" name=""><span>List item 003</span></label><i class="la la-trash"></i></li>
+			<li class="list-item"><label><input type="checkbox" name=""><span>List item 004</span></label><i class="la la-trash"></i></li>
+			<li class="list-item"><label><input type="checkbox" name=""><span>List item 005</span></label><i class="la la-trash"></i></li>
+		</ul>
+	</div>
+	<div class="list-footer">
+		<p>Minor text...</p>
+	</div>
+</div>
+
+<script src="js/Sortable.js"></script>
+
+<script type="text/javascript">
+	// new Sortable(document.getElementById('mylist'), { group: 'shared' });
+
+	var elements = document.getElementsByClassName('list-item');
+	new Sortable(mylist, {
+	    animation: 150,
+	    ghostClass: 'blue-background-class'
+	});
+</script>
+
+</body>
+</html>

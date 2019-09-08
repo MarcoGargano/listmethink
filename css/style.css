@@ -1,0 +1,33 @@
+body {
+  background: #f6f6f6; }
+
+.list {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 10% auto;
+  border: solid 1px #ddd;
+  border-radius: 6px; }
+  .list-head, .list-footer {
+    padding: 0 20px; }
+  .list-body input {
+    margin: 10px 20px; }
+  .list-body span {
+    border-left: solid 1px #ddd;
+    padding: 15px 20px; }
+  .list-body .sortable-chosen {
+    -webkit-box-shadow: 0 0 20px red;
+    box-shadow: 0 0 20px red; }
+  .list-body .blue-background-class {
+    background: blue; }
+  .list ul {
+    margin: 0;
+    padding: 0; }
+  .list .list-item {
+    list-style: none;
+    min-height: 50px;
+    border-top: solid 1px rgba(233, 30, 99, 0.2);
+    border-bottom: solid 1px #90caf9;
+    line-height: 50px;
+    font-size: 1.1rem;
+    font-family: Helvetica; }
